@@ -3,14 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        git 'https://github.com/devikaMahesh/BlueOcean.git'
-        bat 'mvn clean install'
-        readFile 'pom.xml'
+        bat 'mvn compile'
       }
     }
-    stage('Deploy') {
+    stage('Test') {
       steps {
-        echo 'deployed'
+        bat 'mvn clean install'
       }
     }
   }

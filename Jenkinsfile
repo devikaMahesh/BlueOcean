@@ -1,24 +1,24 @@
 pipeline {
   agent {
     node {
-      label 'slave'
+      label 'slav1'
     }
     
   }
   stages {
     stage('Build') {
       steps {
-        echo 'Build took place'
+        fileExists 'BlueOcean Integration'
       }
     }
     stage('Test') {
       steps {
-        echo 'Testing'
+        echo 'Test is done'
       }
     }
     stage('Deploy') {
       steps {
-        echo 'Deployed'
+        echo 'deployed'
       }
     }
   }

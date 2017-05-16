@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         git 'https://github.com/devikaMahesh/BlueOcean.git'
-        bat 'make'
+        bat 'mvn clean install'
       }
     }
     stage('Deploy') {

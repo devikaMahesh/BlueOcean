@@ -3,12 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        fileExists 'BlueOcean Integration'
-      }
-    }
-    stage('Test') {
-      steps {
-        echo 'Test is done'
+        sh 'mvn integration-test -Dmain-suite=\${circuit-suite}'
       }
     }
     stage('Deploy') {

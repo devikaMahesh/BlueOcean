@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn integration-test -Dmain-suite=\${circuit-suite}'
+        git 'https://github.com/devikaMahesh/BlueOcean.git'
       }
     }
     stage('Deploy') {

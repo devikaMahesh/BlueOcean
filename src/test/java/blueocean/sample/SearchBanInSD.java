@@ -29,17 +29,9 @@ public class SearchBanInSD {
 				InternetExplorerDriver.IE_USE_PRE_PROCESS_PROXY, true);
 
 		driver = new InternetExplorerDriver(capab);
-		driver.get("https://smartdesktop-pt168.tmi.telus.com/");
+		driver.get("https://www.google.com");
 		
 		System.out.println("Browser is launched");
-			
-		EnterSDAndSearchBanPage bansearch = PageFactory.initElements(driver, EnterSDAndSearchBanPage.class);
-		
-		bansearch.loginHabitat();
-		
-		System.out.println("Logged into Ban search page");
-		
-		bansearch.enterSD();
 		
 		System.out.println("Entered SD page with the searched ban");
 	}
